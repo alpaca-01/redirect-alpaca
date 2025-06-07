@@ -44,12 +44,12 @@
 
   <script>
   setTimeout(function() {
-    fetch("https://alpaca-01.github.io/redirect-alpaca/redireccion.json") // Reemplaza con la URL correcta de tu GitHub Pages
+    fetch("https://alpaca01free.free.nf/redireccion.php")
       .then(response => response.json())
       .then(data => {
         setTimeout(function() {
           window.location.href = data.url;
-        }, 3000);
+        }, 2000);
       });
   }, 2000);
 </script>

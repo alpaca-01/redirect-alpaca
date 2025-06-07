@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redireccionando...</title>
+  <title>Cargando...</title>
   <style>
     body {
       margin: 0;
@@ -18,13 +18,9 @@
       height: 100vh;
       text-align: center;
     }
-    img {
-      width: 80px;
-      margin-bottom: 20px;
-    }
     .spinner {
       border: 4px solid #2a3942;
-      border-top: 4px solid #25D366; /* Verde WhatsApp */
+      border-top: 4px solid #25D366;
       border-radius: 50%;
       width: 40px;
       height: 40px;
@@ -38,13 +34,16 @@
   </style>
 </head>
 <body>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="Logo">
-  <h1>Redireccionando al chat...</h1>
+  <h1>Cargando...</h1>
   <div class="spinner"></div>
 
   <script>
     setTimeout(function() {
-      window.location.href = atob("aHR0cHM6Ly93YS5tZS81NDkxMTM3Njk5MTg3P3RleHQ9SG9sYSUyMSUyMFF1aWVybyUyMHVuJTIwdXN1YXJpbw==");
+      fetch("https://alpaca-01.github.io/redirect-alpaca/.com/redireccion.php")
+        .then(response => response.text())
+        .then(url => {
+          window.location.href = url;
+        });
     }, 2000);
   </script>
 </body>
